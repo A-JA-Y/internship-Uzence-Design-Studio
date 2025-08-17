@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-        <div className=" flex flex-col my-2  items-center justify-center w-full">
+        <div className=" flex flex-col my-4  items-center justify-center w-full">
           <h1 className="text-center sm:text-4xl text-2xl font-bold sm:font-extrabold ">InputField</h1>
           <InputField
             label="Name"
@@ -40,8 +40,9 @@ function App() {
             </button>
           </div>
         </div>
+        <hr />
 
-        <div className=" flex flex-col  items-center justify-center w-full my-2">
+        <div className=" flex flex-col gap-4  items-center justify-center w-full mt-4">
           <h1 className="text-center sm:text-4xl text-2xl font-bold sm:font-extrabold ">DataTable</h1>
           <div>
             <DataTable
