@@ -34,19 +34,22 @@ const InputField: React.FC<InputFieldProps> = ({
     };
 
     return (
-        <div className={`input-field ${variant} ${size} ${invalid ? 'invalid' : ''} ${disabled ? 'disabled' : ''}`} >
-            {label && <label className="input-label" >{label}</label>}
+        <div className={`input-field ${variant} ${size} ${invalid ? 'invalid' : ''} ${disabled ? 'disabled ' : ''} p-5 w-full   flex flex-col  `} >
+            <div className='mx-auto'>
+
+            {label && <label className="input-label px-2 text-lg" >{label}:</label>}
             <input
             type="text"
             placeholder={placeholder}
             value={value}
             onChange={handleInputChange}
             disabled={disabled}
-            className="input-element"
+            className={`input-element border-2 border-zinc-600 sm:px-8 px-2 sm:py-2 py-1 w-full rounded-full ${disabled ? 'cursor-not-allowed bg-slate-400 bg-opacity-20' : '' }`}
             
             />
-            {helperText && !invalid && <p className="helper-text" >{helperText}</p>}
-            {invalid && errorMessage && <p className="error-message" >{errorMessage}</p>}
+            {helperText && !invalid && <p className="helper-text text-sm text-red-500 translate-x-4" >{helperText}</p>}
+            {invalid && errorMessage && <p className="error-message text-sm translate-x-4" >{errorMessage}</p>}
+            </div>
         </div>
     );
 };
